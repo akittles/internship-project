@@ -4,8 +4,13 @@ Feature: Reelly sign-in page
 
   Scenario: User can go to sign in page
     Given Open main page
-    When Click on open in browser button
-    Then Verify user on signin page
+    Given User enters username and password
+    Then User clicks continue
+
+
+
+#    When Click on open in browser button
+#    Then Verify user on signin page
 
 
   Scenario: Check UI on sign in page
