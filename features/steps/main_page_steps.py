@@ -6,4 +6,3 @@ from time import sleep
 @given('Open main page')
 def open_reelly(context):
     context.app.main_page.open()
-

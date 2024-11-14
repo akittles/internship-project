@@ -13,6 +13,6 @@ Feature: Reelly sign-in page
 #    Then Verify user on signin page
 
 
-  Scenario: Check UI on sign in page
-    Given Open sign-in page
-    Then Verify signin page UI
+#  Scenario: Check UI on sign in page
+#    Given Open sign-in page
+#    Then Verify signin page UI

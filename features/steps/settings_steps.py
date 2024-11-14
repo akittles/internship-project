@@ -30,12 +30,13 @@ def click_settings(context):
 @when('Switch to new window')
 def switch_window(context):
     context.app.base_page.switch_to_new_window()
-    # sleep(2)
+    sleep(2)
 
 
 @then('Verify Whatsapp page')
 def verify_whatsapp_page(context):
     context.app.whatsapp_page.verify_url()
+    sleep(2)
 
 
 @then('Return to original page')

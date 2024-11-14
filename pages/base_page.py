@@ -23,6 +23,14 @@ class Page:
     def input_text(self, text, *locator):
         self.driver.find_element(*locator).send_keys(text)
 
+    # def input(self, text, *locator):
+    #     self.driver.find_element(*locator).send_keys(text)
+    #     element = self.wait_for_element_appear(*locator)
+    #     element.send_keys(text)
+
+    # def save_screenshot(self, name):
+    #     self.driver.save_screenshot(f'{name}.png')
+
     def hover_element(self, *locator):
         element = self.find_element(*locator)
         actions = ActionChains(self.driver)
@@ -66,6 +74,19 @@ class Page:
             EC.element_to_be_clickable(locator),
             message=f'Element by locator {locator} not clickable'
         ).click()
+
+    # def wait_for_element_click(self, *locator):
+    #     self.wait.until(
+    #         EC.element_to_be_clickable(locator),
+    #         message=f'Element by {locator} not clickable'
+    #     ).click()
+
+    # def wait_for_element_visible(self, *locator):
+    #     element = self.wait.until(
+    #         EC.visibility_of_element_located(locator),
+    #         message=f'Element by {locator} not visible'
+    #     )
+    #     return element
 
     def wait_for_element_appear(self, *locator):
         self.wait.until(
