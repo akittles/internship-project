@@ -12,11 +12,11 @@ from app.application import Application
 from support.logger import logger
 
 
-def browser_init(context,scenario_name):
+def browser_init(context, scenario_name):
     """
     :param context: Behave context
     """
-    #
+    #########REGULAR SELENIUM TESTING########
     # driver_path = ChromeDriverManager().install()
     # service = Service(driver_path)
     # context.driver = webdriver.Chrome(service=service)
@@ -41,7 +41,7 @@ def browser_init(context,scenario_name):
     #     service=service
     # )
 
-    ### BROWSERSTACK---MOBILE TESTING ###
+    ### BROWSERSTACK---MOBILE TESTING ### CAN ALSO BE USED IN CLOUD TESTING
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
     bs_user = 'anthonykittles_DMlABu'
     bs_key = 'UUbrpL7fPHuFFe9Y7zo4'
@@ -69,20 +69,6 @@ def browser_init(context,scenario_name):
 
     context.app = Application(context.driver)
 
-    #------ALTERNATIVES------------------
-
-    ### BROWSERS WITH DRIVERS: provide path to the driver file ###--old way of doing things,
-    #           #Not needed but a second option
-    # driver_path = GeckoDriverManager().install()
-    # service = Service(executable_path='C:/Users/Owner/Desktop/internship-project/geckodriver-v0.35.0-win32'
-    #                                   '/geckodriver.exe')
-    # context.driver = webdriver.Firefox(service=service)
-
-    # context.driver = webdriver.Safari() #CAN ONLY RUN ON MAC OR IOS
-
-    #
-    context.app = Application(context.driver)
-
 
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
@@ -108,6 +94,9 @@ def after_scenario(context, feature):
 
 
  # ------------------------------------------------------------
+
+ ######### APPIUM #######
+
  # def mobile_driver_init(context, scenario_name):
     #     """
     #     :param context: Behave context
@@ -148,3 +137,14 @@ def after_scenario(context, feature):
 
 
 # ---------------------------
+
+#------ALTERNATIVES------------------
+
+    ### BROWSERS WITH DRIVERS: provide path to the driver file ###--old way of doing things,
+    #           #Not needed but a second option
+    # driver_path = GeckoDriverManager().install()
+    # service = Service(executable_path='C:/Users/Owner/Desktop/internship-project/geckodriver-v0.35.0-win32'
+    #                                   '/geckodriver.exe')
+    # context.driver = webdriver.Firefox(service=service)
+
+    # context.driver = webdriver.Safari() #CAN ONLY RUN ON MAC OR IOS
