@@ -4,10 +4,6 @@ from time import sleep
 
 
 class TelegramPage(Page):
-    NEWS_BTN = (By.CSS_SELECTOR, "div [class*='settings-block-menu'] a[href*= 't.me/reellydxb']")
-
-    def open_news(self):
-        self.wait_and_click(*self.NEWS_BTN)
 
     def verify_url(self, expected_url="https://t.me/reellydxb"):
         assert expected_url in self.driver.current_url, (

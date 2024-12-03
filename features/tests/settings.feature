@@ -1,6 +1,4 @@
-# Created by Owner at 11/7/2024
 Feature: Accessing Whatsapp and Telegram
-  # Enter feature description here
 
   Scenario: User can access Whatsapp and Telegram Enter
     Given Open main page
@@ -15,4 +13,3 @@ Feature: Accessing Whatsapp and Telegram
     And Return to original page
     When Click on news
     Then Verify Telegram page
-
