@@ -5,4 +5,12 @@ from time import sleep
 
 @given('Open main page')
 def open_reelly(context):
-    context.app.main_page.open()
+    context.driver.get('https://soft.reelly.io/')
+    # context.app.main_page.open()
+
+
+@when('Click on settings')
+def click_settings(context):
+    context.app.main_page.click_settings_btn()
+    # sleep(5)
+    # context.driver.settings_page.click_settings()

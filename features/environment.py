@@ -17,10 +17,10 @@ def browser_init(context, scenario_name):
     :param context: Behave context
     """
     #########REGULAR SELENIUM TESTING########
-    # driver_path = ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
-    # context.app = Application(context.driver)
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
+    context.app = Application(context.driver)
 
 
 
@@ -43,19 +43,19 @@ def browser_init(context, scenario_name):
 
     ### BROWSERSTACK---MOBILE TESTING ### CAN ALSO BE USED IN CLOUD TESTING
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'anthonykittles_DMlABu'
-    bs_key = 'UUbrpL7fPHuFFe9Y7zo4'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    #
-    options = Options()
-    bstack_options = {
-        "os": "Windows",
-        "osVersion": "11",
-        'browserName': 'chrome',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    # bs_user = 'anthonykittles_DMlABu'
+    # bs_key = 'UUbrpL7fPHuFFe9Y7zo4'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    # #
+    # options = Options()
+    # bstack_options = {
+    #     "os": "Windows",
+    #     "osVersion": "11",
+    #     'browserName': 'chrome',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
     ### BROWSERS WITH DRIVERS: provide path to the driver file ###--old way of doing things,
     #           #Not needed but may fix later

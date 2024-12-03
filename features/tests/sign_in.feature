@@ -4,7 +4,7 @@ Feature: Reelly sign-in page
 
 
   Scenario: User can go to sign in page
-    Given Open main page
+    Given Open sign-in page
     Given User enters username and password
     Then User clicks continue
 
