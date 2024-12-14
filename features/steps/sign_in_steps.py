@@ -16,6 +16,7 @@ def enter_username_password(context):
 @then('User clicks continue')
 def click_continue_button(context):
     context.app.sign_in_page.click_continue()
+    sleep(5)
 
 
 # @when('Click on open in browser button')

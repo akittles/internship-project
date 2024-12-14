@@ -7,7 +7,6 @@ class SigninPage(Page):
     EMAIL = (By.CSS_SELECTOR, "#email-2")
     PASS = (By.CSS_SELECTOR, "[name= 'Password']")
     CONTINUE_BTN = (By.CSS_SELECTOR, "form [href= '#']")
-
     LOGO = (By.CSS_SELECTOR, "div.html-logo.w-embed")  # Reelly logo
     SIGN_IN_UI1 = (By.CSS_SELECTOR, ".form-container")  #Sign in or create new account
     FORGOT_PASS_LINK = (By.CSS_SELECTOR, "a[href*='request-password-reset']")
