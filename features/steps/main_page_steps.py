@@ -31,6 +31,21 @@ def click_apply_filter(context):
     context.app.main_page.click_apply_filter_btn()
 
 
+@when('Verify cards title')
+def verify_cards_title(context):
+    context.app.main_page.verify_cards_title()
+
+
+@when('Verify cards pictures')
+def verify_cards_picture(context):
+    context.app.main_page.verify_cards_pictures()
+
+
+@then('User clicks off plan button')
+def click_off_plan_btn(context):
+    context.app.main_page.click_off_plan_btn()
+
+
 @then('Verify prices on each page is in range')
 def verify_prices(context):
     context.app.main_page.verify_prices_on_page()
@@ -40,3 +55,7 @@ def verify_prices(context):
 def click_next_page(context):
     context.app.main_page.click_next_page_btn()
 
+
+@then('Verify off plan page')
+def verify_off_plan_page(context):
+    context.app.main_page.verify_off_plan_page()
