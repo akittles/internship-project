@@ -15,6 +15,9 @@ class MainPage(Page):
     OFF_PLAN_BTN = (By.CSS_SELECTOR, "#w-node-_455f4786-676e-1311-ab71-82d622b51c3b-9b22b68b")
     CARDS_TITLES = (By.CSS_SELECTOR, "[wized='projectName']")
     CARDS_PICS = (By.CSS_SELECTOR, "a[href*='https://soft.reelly.io/project/general?projectid=']")
+    SALES_STATUS_BTN = (By.CSS_SELECTOR, "select#Location-2")
+    OUT_OF_STOCK_FLTR = (By.CSS_SELECTOR, "option[value='Out of stock']")
+    OUT_OF_STOCK_TAG = (By.CSS_SELECTOR, "div[wized=projectStatus]")
 
     def open(self):
         self.open_url('https://soft.reelly.io/')
@@ -75,3 +78,19 @@ class MainPage(Page):
         all_pics = self.find_elements(*self.CARDS_PICS)
         for pic in all_pics:
             assert pic.get_attribute('src') != '', "Card picture source is empty"
+
+    def click_sales_status_filter_btn(self):
+        self.wait_and_click(*self.SALES_STATUS_BTN)
+
+    def click_out_of_stock_fltr(self):
+        self.wait_and_click(*self.OUT_OF_STOCK_FLTR)
+
+    def verify_out_of_stock_tags(self):
+        self.driver.execute_script("window.scrollBy(0,2000)", "")
+        sleep(4)
+        self.driver.execute_script("window.scrollBy(0,2000)", "")
+
+        all_tags = self.driver.find_elements(*self.OUT_OF_STOCK_TAG)
+
+        for tag in all_tags:
+            assert tag.text == 'Out of stock', "Tag is not 'Out of stock'"

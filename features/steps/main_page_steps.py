@@ -41,6 +41,21 @@ def verify_cards_picture(context):
     context.app.main_page.verify_cards_pictures()
 
 
+@when('User clicks on sales status filter')
+def click_sales_status_filter(context):
+    context.app.main_page.click_sales_status_filter_btn()
+
+
+@when('User clicks on out of stock')
+def click_out_of_stock(context):
+    context.app.main_page.click_out_of_stock_fltr()
+
+
+@then('Verify out of stock tags')
+def verify_out_of_stock_tags(context):
+    context.app.main_page.verify_out_of_stock_tags()
+
+
 @then('User clicks off plan button')
 def click_off_plan_btn(context):
     context.app.main_page.click_off_plan_btn()
