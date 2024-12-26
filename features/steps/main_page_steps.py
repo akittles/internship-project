@@ -51,6 +51,11 @@ def click_out_of_stock(context):
     context.app.main_page.click_out_of_stock_fltr()
 
 
+@when('User clicks on first project')
+def click_first_project(context):
+    context.app.main_page.click_first_project()
+
+
 @then('Verify out of stock tags')
 def verify_out_of_stock_tags(context):
     context.app.main_page.verify_out_of_stock_tags()

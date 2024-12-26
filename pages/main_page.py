@@ -19,6 +19,8 @@ class MainPage(Page):
     OUT_OF_STOCK_FLTR = (By.CSS_SELECTOR, "option[value='Out of stock']")
     OUT_OF_STOCK_TAG = (By.CSS_SELECTOR, "div[wized=projectStatus]")
 
+    CARD_BTN = (By.CSS_SELECTOR, "a[href*='https://soft.reelly.io/project/general?projectid='")
+
     def open(self):
         self.open_url('https://soft.reelly.io/')
 
@@ -27,7 +29,8 @@ class MainPage(Page):
 
     def click_off_plan_btn(self):
         self.wait_and_click(*self.OFF_PLAN_BTN)
-        sleep(3)
+        # self.wait.until(EC.visibility_of(self.OFF_PLAN_BTN))
+        # sleep(3)
 
     def click_filters_btn(self):
         self.wait_and_click(*self.FILTER_BTN)
@@ -94,3 +97,6 @@ class MainPage(Page):
 
         for tag in all_tags:
             assert tag.text == 'Out of stock', "Tag is not 'Out of stock'"
+
+    def click_first_project(self):
+        self.wait_and_click(*self.CARD_BTN)
