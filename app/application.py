@@ -6,6 +6,7 @@ from pages.main_page import MainPage
 from pages.whatsapp_page import WhatsAppPage
 from pages.telegram_page import TelegramPage
 from pages.gen_info_page import GenInfoPage
+from pages.market_page import MarketPage
 
 
 class Application:
@@ -18,3 +19,4 @@ class Application:
         self.whatsapp_page = WhatsAppPage(driver)
         self.telegram_page = TelegramPage(driver)
         self.gen_info_page = GenInfoPage(driver)
+        self.market_page = MarketPage(driver)
