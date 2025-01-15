@@ -3,6 +3,21 @@ from behave import given, when, then
 from time import sleep
 
 
+@when('User pages forward through market')
+def user_pages_forward(context):
+    context.app.market_page.pages_forward()
+
+
+@when('User pages backwards through market')
+def user_pages_backward(context):
+    context.app.market_page.pages_backward()
+
+
+@when('User clicks on developers tab')
+def user_clicks_developers(context):
+    context.app.market_page.click_developer_tab()
+
+
 @then('User clicks on market')
 def click_market(context):
     context.app.market_page.click_market_btn()
@@ -13,12 +28,6 @@ def verify_market_page(context):
     context.app.market_page.verify_market_page()
 
 
-@when('User pages forward through market')
-def user_pages_forward(context):
-    context.app.market_page.pages_forward()
-
-
-@when('User pages backwards through market')
-def user_pages_backward(context):
-    context.app.market_page.pages_backward()
-
+@then('Verify cards have license tag')
+def verify_license_tag(context):
+    context.app.market_page.verify_license_tags()
