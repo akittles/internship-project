@@ -2,14 +2,14 @@
 Feature: Pagination through market feature
   # Enter feature description here
 
-#  Scenario: User can open market tab and go through the pagination
-#    Given Open main page
-#    Given User enters username and password
-#    Then User clicks continue
-#    Then User clicks on market
-#    Then Verify market page
-#    When User pages forward through market
-#    When User pages backwards through market
+  Scenario: User can open market tab and go through the pagination
+    Given Open main page
+    Given User enters username and password
+    Then User clicks continue
+    Then User clicks on market
+    Then Verify market page
+    When User pages forward through market
+    When User pages backwards through market
 
 
   Scenario: Verifying license tag in cards in developers tab
@@ -20,7 +20,3 @@ Feature: Pagination through market feature
     Then Verify market page
     When User clicks on developers tab
     Then Verify cards have license tag
-
-#  for next task
-#  developer tab "div[fs-queryparam-name=markettagdeveloper"
-#  license tag "div.license-block"---for tag in all_tags...
