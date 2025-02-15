@@ -10,6 +10,7 @@ class MarketPage(Page):
     BACK_BTN = (By.CSS_SELECTOR, "[wized = 'previousPageMarket']")
     DEV_TAB = (By.CSS_SELECTOR, "div[fs-queryparam-name=markettagdeveloper")
     LICENSE_TAGS = (By.CSS_SELECTOR, "div.license-block")
+    ADD_COMPANY_BTN = (By.CSS_SELECTOR, "[href='/presentation-for-the-agency'][class='add-company-button w-inline-block']")
 
     def click_market_btn(self):
         self.wait_and_click(*self.MRKT_BTN)
@@ -60,5 +61,5 @@ class MarketPage(Page):
         for tag in all_tags:
             assert tag.text != "", "License tag text is empty"
 
-
-
+    def click_add_company_btn(self):
+        self.wait_and_click(*self.ADD_COMPANY_BTN)

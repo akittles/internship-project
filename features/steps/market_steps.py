@@ -31,3 +31,9 @@ def verify_market_page(context):
 @then('Verify cards have license tag')
 def verify_license_tag(context):
     context.app.market_page.verify_license_tags()
+
+
+@then('User clicks Add Company button')
+def click_add_company(context):
+    context.app.market_page.click_add_company_btn()
+

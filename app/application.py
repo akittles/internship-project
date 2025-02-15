@@ -8,6 +8,7 @@ from pages.telegram_page import TelegramPage
 from pages.gen_info_page import GenInfoPage
 from pages.market_page import MarketPage
 from pages.verification_page import VerificationPage
+from pages.add_company_page import AddCompanyPage
 
 
 class Application:
@@ -22,3 +23,4 @@ class Application:
         self.gen_info_page = GenInfoPage(driver)
         self.market_page = MarketPage(driver)
         self.verification_page = VerificationPage(driver)
+        self.add_company_page = AddCompanyPage(driver)

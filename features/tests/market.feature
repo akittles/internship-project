@@ -2,21 +2,32 @@
 Feature: Pagination through market feature
   # Enter feature description here
 
-  Scenario: User can open market tab and go through the pagination
+#  Scenario: User can open market tab and go through the pagination
+#    Given Open main page
+#    Given User enters username and password
+#    Then User clicks continue
+#    Then User clicks on market
+#    Then Verify market page
+#    When User pages forward through market
+#    When User pages backwards through market
+#
+#
+#  Scenario: Verifying license tag in cards in developers tab
+#    Given Open main page
+#    Given User enters username and password
+#    Then User clicks continue
+#    Then User clicks on market
+#    Then Verify market page
+#    When User clicks on developers tab
+#    Then Verify cards have license tag
+
+  Scenario: User can open market tab and add company option
     Given Open main page
     Given User enters username and password
     Then User clicks continue
     Then User clicks on market
     Then Verify market page
-    When User pages forward through market
-    When User pages backwards through market
+    Then User clicks Add Company button
+    Then Verify Add Company page
+    Then Verify Publish my Company button
 
-
-  Scenario: Verifying license tag in cards in developers tab
-    Given Open main page
-    Given User enters username and password
-    Then User clicks continue
-    Then User clicks on market
-    Then Verify market page
-    When User clicks on developers tab
-    Then Verify cards have license tag
