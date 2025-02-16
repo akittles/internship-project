@@ -2,7 +2,7 @@
 Feature: View page template feature
   # Enter feature description here
 
-  #    view page template/ send my cv scenario
+
   Scenario: User can open Send my CV page
     Given Open main page
     Given User enters username and password
