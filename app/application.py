@@ -9,6 +9,7 @@ from pages.gen_info_page import GenInfoPage
 from pages.market_page import MarketPage
 from pages.verification_page import VerificationPage
 from pages.add_company_page import AddCompanyPage
+from pages.view_page_template_page import ViewPageTemplate
 
 
 class Application:
@@ -24,3 +25,4 @@ class Application:
         self.market_page = MarketPage(driver)
         self.verification_page = VerificationPage(driver)
         self.add_company_page = AddCompanyPage(driver)
+        self.view_page_template = ViewPageTemplate(driver)
