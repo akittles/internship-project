@@ -31,6 +31,41 @@ def click_apply_filter(context):
     context.app.main_page.click_apply_filter_btn()
 
 
+@when('Verify cards title')
+def verify_cards_title(context):
+    context.app.main_page.verify_cards_title()
+
+
+@when('Verify cards pictures')
+def verify_cards_picture(context):
+    context.app.main_page.verify_cards_pictures()
+
+
+@when('User clicks on sales status filter')
+def click_sales_status_filter(context):
+    context.app.main_page.click_sales_status_filter_btn()
+
+
+@when('User clicks on out of stock')
+def click_out_of_stock(context):
+    context.app.main_page.click_out_of_stock_fltr()
+
+
+@when('User clicks on first project')
+def click_first_project(context):
+    context.app.main_page.click_first_project()
+
+
+@then('Verify out of stock tags')
+def verify_out_of_stock_tags(context):
+    context.app.main_page.verify_out_of_stock_tags()
+
+
+@then('User clicks off plan button')
+def click_off_plan_btn(context):
+    context.app.main_page.click_off_plan_btn()
+
+
 @then('Verify prices on each page is in range')
 def verify_prices(context):
     context.app.main_page.verify_prices_on_page()
@@ -40,3 +75,7 @@ def verify_prices(context):
 def click_next_page(context):
     context.app.main_page.click_next_page_btn()
 
+
+@then('Verify off plan page')
+def verify_off_plan_page(context):
+    context.app.main_page.verify_off_plan_page()

@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from pages.base_page import Page
+from time import sleep
 
 
 class SigninPage(Page):
@@ -32,3 +33,5 @@ class SigninPage(Page):
     # def verify_url(self):
     #     url = self.driver.current_url
     #     assert url == 'https://soft.reelly.io/sign-in', f'Expected URL not in {url}'
+
+

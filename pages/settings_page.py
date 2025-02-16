@@ -6,12 +6,16 @@ from time import sleep
 class SettingsPage(Page):
     NEWS_BTN = (By.CSS_SELECTOR, "div [class*='settings-block-menu'] a[href*= 't.me/reellydxb']")
     SUPPORT_BTN = (By.CSS_SELECTOR, "a[href*= 'send?phone']")
+    VERIFICATION_BTN = (By.CSS_SELECTOR, "a[href= '/verification/step-0']")
 
     def open_support(self):
         self.wait_and_click(*self.SUPPORT_BTN)
 
     def open_news(self):
         self.wait_and_click(*self.NEWS_BTN)
+
+    def open_verification(self):
+        self.wait_and_click(*self.VERIFICATION_BTN)
 
 
 
